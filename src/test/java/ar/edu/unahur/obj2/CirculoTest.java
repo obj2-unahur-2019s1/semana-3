@@ -15,11 +15,11 @@ public class CirculoTest {
 
     @Test
     public void saludoExitoso() {
-        Circulo c1 = new Circulo(20);
+        Circulo c1 = new Circulo("Rojo",20);
 
         Double superficieEsperada = Math.PI*Math.pow(20,2);
 
-        Assert.assertEquals(superficieEsperada, c1.superficie());
+        Assert.assertEquals(superficieEsperada, c1.area());
 
     }
 

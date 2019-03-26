@@ -1,23 +1,44 @@
 # Figuras
 
 
-Se solicita modelar un conjunto de figuras geométricas a las cuales se les puede solicitar:
+Se solicita modelar un conjunto de figuras geométricas a las cuales se les puede preguntar su:
 
-* superficie() : Double
-* perimetro() : Double
+* area() : Double
 
-## Figuras a Modelar:
+Todas las figuras geométricas tienen un color definido. Las figuras permiten ser pintadas y así cambia de color.
 
-### Circulo
+* pintar(Color: color)
+
+## Figuras Básicas :
+
+#### Circulo
 Tiene como atributo `radio` de tipo `Integer`. Se calculan:
 
-* superficie: Es Pi * Radio ^ 2
-* perimetro() : Es 2 * Pi * Radio
+* area: Pi * Radio ^ 2
 
-### Triángulo
+#### Semicirculo
+Tiene los mismos atributos que circulo pero su `area` y perímetro` se calculan distinto:
+
+* area: es la mitad de la superficie del circulo
+
+#### Triángulo
+Tiene como atributos la base y la altura y su area se calcula de la siguiente forma:
+
+* area: base * altura / 2
+
+#### Rectángulo
+Tambien tiene como atributos la base y la altura y su area se calcula de la siguiente forma:
+
+* area: base * altura
 
 
-### Rectángulo
+## Figuras agujereadas
 
-### Hexágono
+Mas allá de las figuras básicas es posible tener figuras `agujereadas`. Tienen básicamente los mismos atributos que las figuras básicas pero cambia la forma en la que se calcula el area.
+El area de una figura agujereada es un tercio del area de la figura original, por ejemplo:
+
+* Area del Rectángulo agujereado = base * altura / 3
+
+Se solicita poder tener una figura agujereada  por cada figura básica existente.
+
 

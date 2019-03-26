@@ -4,11 +4,12 @@ public class Circulo extends Figura {
 
     private Integer radio;
 
-    public Circulo(Integer radio) {
+    public Circulo(String color, Integer radio) {
+        super(color);
         this.radio = radio;
     }
 
-    public Double superficie() {
+    public Double area() {
         return  Math.PI*Math.pow(radio,2);
     }
 
