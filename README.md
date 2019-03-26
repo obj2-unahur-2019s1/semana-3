@@ -3,34 +3,57 @@
 
 Se solicita modelar un conjunto de figuras geométricas a las cuales se les puede preguntar su:
 
-* area() : Double
+* `Double area()`
+* `String color()`
+* `Boolean esRegular()`
 
 Todas las figuras geométricas tienen un color definido. Las figuras permiten ser pintadas y así cambia de color.
 
-* pintar(Color: color)
+* `pintar(Color: color)`
+
+Se considera que un figura es igual a otra si el tipo,area y color son igual.
 
 ## Figuras Básicas :
 
 #### Circulo
-Tiene como atributo `radio` de tipo `Integer`. Se calculan:
+Tiene como atributo `radio` de tipo `Integer`. El area se calcula:
 
-* area: Pi * Radio ^ 2
+* `area`: Pi * Radio ^ 2
+
+y es una figura `regular`.
 
 #### Semicirculo
-Tiene los mismos atributos que circulo pero su `area` y perímetro` se calculan distinto:
+Tiene los mismos atributos que circulo pero su `area` se calculan distinto:
 
-* area: es la mitad de la superficie del circulo
+* `area`: es la mitad de la superficie del circulo
+
+No es una figura `regular`.
 
 #### Triángulo
 Tiene como atributos la base y la altura y su area se calcula de la siguiente forma:
 
-* area: base * altura / 2
+* `area`: base * altura / 2
+
+y es una figura `regular`.
+
 
 #### Rectángulo
 Tambien tiene como atributos la base y la altura y su area se calcula de la siguiente forma:
 
-* area: base * altura
+* `area`: base * altura
 
+y es una figura `regular`.
+
+
+## Pruebas
+
+1. Crear un circulo de radio `10` y color `amarillo` y verificar que su area es aproximadamente `314,16`.
+2. Crear un Semicirculo de radio `10` y color `verde` y verificar que su area es aproximadamente `157,08`.
+3. Crear un Triangulo de base `10` y altura `20` y de color `azúl` y verificar que su area es `100`.
+4. Crear un Rectangulo de base `10` y altura `20` y  color `violeta` y verificar que su area es `200`.
+5. Crear otro Rectangulo de base `10` y altura `20` y  color `violeta` y verificar que es igual al creado en el punto anterior.
+6. Pintar de color `verde` alguno de los rectangulos ya creado y verficiar que ya no son iguales.
+7. Ordenar **programaticamente** por su area las figuras creadas de menos a mayor y verificar q la mas pequeña es el triángulo y la mas grande es el circulo.
 
 ## Figuras agujereadas
 
