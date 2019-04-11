@@ -1,5 +1,6 @@
 package ar.edu.unahur.obj2;
 
+import ar.edu.unahur.obj2.figuras.Circulo;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
