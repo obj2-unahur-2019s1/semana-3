@@ -1,7 +1,9 @@
 package ar.edu.unahur.obj2;
 
+import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Estudiante {
 
@@ -23,6 +25,9 @@ public class Estudiante {
         return apellido;
     }
 
+    public Set<Carrera> getCarreras() {
+        return carreras;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -46,5 +51,17 @@ public class Estudiante {
         sb.append(", apellido='").append(apellido).append('\'');
         sb.append('}');
         return sb.toString();
+    }
+
+    public Set<Materia> materias() {
+        return carreras.stream()
+                .flatMap(d -> d.getMaterias().stream())
+                .collect(Collectors.toCollection(LinkedHashSet::new));
+    }
+
+    public Set<Materia> materiasPorDepartamento(Departamento departamento) {
+        return materias().stream()
+                .filter(m -> m.getDepartamento().equals(departamento))
+                .collect(Collectors.toSet());
     }
 }

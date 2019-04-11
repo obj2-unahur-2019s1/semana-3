@@ -11,4 +11,12 @@ public class Carrera {
         this.nombre = nombre;
         this.materias = materias;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Set<Materia> getMaterias() {
+        return materias;
+    }
 }

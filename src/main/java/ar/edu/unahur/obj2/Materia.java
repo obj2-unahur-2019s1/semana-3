@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2;
 
-public class Materia {
+public class Materia implements Comparable<Materia> {
 
     private String nombre;
     private int cargaHoraria;
@@ -22,5 +22,10 @@ public class Materia {
 
     public Departamento getDepartamento() {
         return departamento;
+    }
+
+    @Override
+    public int compareTo(Materia o) {
+        return this.nombre.compareTo(o.nombre);
     }
 }
