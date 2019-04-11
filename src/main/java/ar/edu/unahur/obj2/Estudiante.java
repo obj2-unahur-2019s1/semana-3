@@ -1,5 +1,6 @@
 package ar.edu.unahur.obj2;
 
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -15,6 +16,7 @@ public class Estudiante {
     public Estudiante(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.carreras = new HashSet<>();
     }
 
     public String getNombre() {

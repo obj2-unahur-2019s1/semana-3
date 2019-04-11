@@ -6,10 +6,13 @@ public class Carrera {
 
     private String nombre;
     private Set<Materia> materias;
+    private Set<Estudiante> estudiantes;
 
-    public Carrera(String nombre, Set<Materia> materias) {
+    public Carrera(String nombre, Set<Materia> materias, Set<Estudiante> estudiantes) {
         this.nombre = nombre;
         this.materias = materias;
+        this.estudiantes = estudiantes;
+        this.estudiantes.stream().forEach(e -> e.getCarreras().add(this));
     }
 
     public String getNombre() {
